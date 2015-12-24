@@ -1,7 +1,16 @@
 language: node_js
-node_js:
-  - "4.1"
 
-before_script:
-  - npm install -g gulp
+node_js:
+  - '4.1'
+
 script: gulp jest
+
+before_deploy:
+  - npm install gulp
+
+deploy:
+  provider: heroku
+  app: calm-hamlet-6819
+  api_key:
+    secure: hN0p6ympXRiWla5IIanQlIIifekoSDTGglI1tlAKvcKrm0bwV6dqkxjjL4yHOhZlNN3GgWOWmYV0LbUH3LITCLlWwPEZVCPVC+I8S779hFfp2qwfaXjTej7aCync29QUtjduB8b1c0Y4VJNFzsdJ0qYgqBhTdEfkkg5JYJyDrwqFFZqrLqW9eSyAmxX2pzMrrKunWAlTUFMZ1/Ln30EA4/KRMVXbb0InR7Rk9bVsDNhWdmMxbtigsGaWKq8PVWvgHm1sg+C9hjCFMuEoY8S5TMyLnrnhd5MN9PU+AxZR6ox2y9wJFq543fH6nKA89pyP34VceyJ/xWUY8izqOl3JKDjX1nH9wWU7LchgH8Nx0I/DVJPMHzD4/UApEyV4pMKs1ZXVRjnC/6Kv2DaX7P10juKF94YtOx/CaSEK3V4N72oFcuJz6oUz9A8G/XpwD0tE5xWzY4nmS0fm0Q1CmyPokyEdIEYW35MHmgkOJRugP4QupyTLthrnZan94bhHnqNaNCl32bhh509rtK8fTgYyfkHhKO49JwWMD109iZekzqacs6wTWlJDciEt/oHYJ5EVZHPjcR2SiG0b0HEO+EX0EeT4pkdPZddm2WGzQWWdnSSBJxP7BQUW268quo4idN+A5AzDPvjMJZmhjxB7Uki2Ngx10OHsChH7NjJMNYZ/+fk=
+  strategy: git
