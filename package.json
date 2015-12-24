@@ -4,12 +4,12 @@
   "description": "An awesome feed reader",
   "main": "main.js",
   "scripts": {
-    "start": "gulp start",
+    "start": "npm install gulp && gulp start",
     "startApp": "electron main.js"
   },
   "repository": {
     "type": "git",
-    "url": "git@github.com:litongxin/Feeds.git"
+    "url": "git@github.com:yanyujason/Feeds.git"
   },
   "keywords": [
     "Feeds reader",
